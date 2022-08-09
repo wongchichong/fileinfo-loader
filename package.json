@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "description": "fs.stats injection into every modules.",
-  "name": "@wongchichong/fileinfo-loader",
+  "name": "webpack-fileinfo-loader",
   "main": "./loader/fileinfo-loader.ts",
   "keywords": [
     "webpack",
