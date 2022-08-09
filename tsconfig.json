@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "sourceMap": false,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "rootDir": ".",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "incremental": true,
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "src/**/*",
+    "custom.d.ts"
+  ]
+}
