@@ -1,9 +1,13 @@
 {
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "fs.stats injection into every modules.",
   "name": "webpack-fileinfo-loader",
   "main": "./dist/loader/fileinfo-loader.js",
   "types": "./dist/loader/fileinfo-loader.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wongchichong/fileinfo-loader"
+  },
   "keywords": [
     "webpack",
     "typescript",
@@ -37,7 +41,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
     "buile:test": "cross-env NODE_ENV=production webpack",
-    "build": "tsc --project tsconfig.loader.json --declaration"
+    "build": "yarn version --patch && tsc --project tsconfig.loader.json --declaration"
   },
   "dependencies": {
     "pretty-print-json": "^1.2.5"
