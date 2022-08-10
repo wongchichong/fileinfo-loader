@@ -47,11 +47,11 @@ in webpack.config.js
 
 with options 
 
-```json
+```js
 { fullpath: false, readis: true, public:true }
 ```
 
-```json
+```js
 {
    name: "index.ts",
    path: "../src/index.ts",
