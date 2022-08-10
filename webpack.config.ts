@@ -34,7 +34,7 @@ export default function () {
     entry: './src/index.ts',
     output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'web'),
     },
     plugins: [
       new webpack.ProgressPlugin(),
@@ -70,6 +70,7 @@ export default function () {
                 public: true,
                 fullpath: false,
                 fullpath111: false,
+                readis: true,
               }
             },
             {

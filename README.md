@@ -1,4 +1,4 @@
-# Webpack fileinfo-loader
+# webpack-fileinfo-loader
 
 Webpack fileinfo-loader with:
 
@@ -10,7 +10,7 @@ Webpack fileinfo-loader with:
 ### Installation
 
 ```bash
-yarn add -D fileinfo-loader
+yarn add -D webpack-fileinfo-loader
 ```
 
 ### Start developing and serve your app

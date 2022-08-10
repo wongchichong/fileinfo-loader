@@ -1,15 +1,12 @@
-import path from 'path'
-import fs from 'fs'
-import { validate } from 'schema-utils'
-import { Schema } from 'schema-utils/declarations/validate'
-import { LoaderContext } from 'webpack'
-
-declare global {
-    /** @see https://nodejs.org/api/fs.html#class-fsstats */
-    const __fileinfo__: fs.Stats
-}
-
-const schema: Schema = {
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const path_1 = __importDefault(require("path"));
+const fs_1 = __importDefault(require("fs"));
+const schema_utils_1 = require("schema-utils");
+const schema = {
     type: 'object',
     properties: {
         test: {
@@ -25,26 +22,19 @@ const schema: Schema = {
         /** Call isXXX() and return */
         readis: { type: "boolean", default: false }
     },
-}
-
-const slash = (p: string) => p.split(path.sep).join(path.posix.sep)
-
-export default function (this: LoaderContext<{ test: string, public: boolean, variable: string, fullpath: boolean, readis: boolean }>, source: string, map: any, meta: any) {
-    const options = this.getOptions()
-
-    const { public: pb, variable, fullpath, readis } = options
-    const { resourcePath } = this
-
-    validate(schema, options, {
+};
+const slash = (p) => p.split(path_1.default.sep).join(path_1.default.posix.sep);
+function default_1(source, map, meta) {
+    const options = this.getOptions();
+    const { public: pb, variable, fullpath, readis } = options;
+    const { resourcePath } = this;
+    (0, schema_utils_1.validate)(schema, options, {
         name: 'FileInfo Loader',
         baseDataPath: 'options',
-    })
-
-    const name = path.basename(resourcePath)
-    const relativePath = slash(fullpath ? resourcePath : path.relative(__dirname, resourcePath))
-
-    const s = fs.statSync(resourcePath)
-
+    });
+    const name = path_1.default.basename(resourcePath);
+    const relativePath = slash(fullpath ? resourcePath : path_1.default.relative(__dirname, resourcePath));
+    const s = fs_1.default.statSync(resourcePath);
     const adv = readis ? {
         isBlockDevice: s.isBlockDevice(),
         isCharacterDevice: s.isCharacterDevice(),
@@ -53,17 +43,16 @@ export default function (this: LoaderContext<{ test: string, public: boolean, va
         isFile: s.isFile(),
         isSocket: s.isSocket(),
         isSymbolicLink: s.isSymbolicLink(),
-    } : {}
-
+    } : {};
     const info = {
         name,
         path: relativePath,
         ...s,
         ...adv,
-    }
-
+    };
     return `${pb ? 'export' : ''} const ${variable ?? '__fileinfo__'} = ${JSON.stringify(info)};
     
     ${source}
-    `
+    `;
 }
+exports.default = default_1;

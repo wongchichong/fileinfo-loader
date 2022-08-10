@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "outDir": "./web",
-    "module": "esnext",
+    "outDir": "./dist",
+    "module": "CommonJS",
     "target": "es2020",
     "lib": [
       "esnext",
-      "dom"
     ],
     "sourceMap": false,
     // "allowJs": true,
@@ -22,19 +21,9 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "incremental": true,
-    "paths": {
-      "*": [
-        "src/*"
-      ]
-    }
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
   },
   "include": [
-    "src/**/*",
+    "loader/**/*",
   ],
   "exclude": [
     "node_modules/**/*",
