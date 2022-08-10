@@ -93,9 +93,4 @@ export default () => {
 };
 ```
 
-### Run coverage
-
-```bash
-npm run coverage
-```
 
