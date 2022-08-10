@@ -1,5 +1,7 @@
 # webpack-fileinfo-loader
 
+Inject/patch/add source file properties into code using fs.stat.
+
 Webpack fileinfo-loader with:
 
 - Webpack 5
@@ -13,10 +15,31 @@ Webpack fileinfo-loader with:
 yarn add -D webpack-fileinfo-loader
 ```
 
-### Start developing and serve your app
+in webpack.config.js
 
-```bash
-npm start
+```js
+{
+  module:{
+    rules:{
+     test: /\.[t]sx?$/,
+    use: [
+        {
+            loader: 'ts-loader',
+        },
+        {
+            loader: 'webpack-fileinfo-loader',
+            //default option
+            options: {
+                public: false,
+                fullpath: false, 
+                readis: false, //Call fs.stats isXXX() and return
+                variable: '__fileinfo__'
+            }
+        },
+    ],
+    }
+  }
+}
 ```
 
 ### Build your application
