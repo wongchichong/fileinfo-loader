@@ -1,6 +1,6 @@
 # webpack-fileinfo-loader
 
-Inject/patch/add source file properties into code using fs.stat.
+Inject/patch/add source file properties into source code using fs.stat.
 
 Webpack fileinfo-loader with:
 
@@ -48,7 +48,7 @@ in webpack.config.js
 with options 
 
 ```json
-{ fullpath: false, readis: true }
+{ fullpath: false, readis: true, public:true }
 ```
 
 ```json
