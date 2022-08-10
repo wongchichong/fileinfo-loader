@@ -50,9 +50,9 @@ function default_1(source, map, meta) {
         ...s,
         ...adv,
     };
-    return `${pb ? 'export' : ''} const ${variable ?? '__fileinfo__'} = ${JSON.stringify(info)};
-    
-    ${source}
-    `;
+    return (`${pb ? 'export' : ''} const ${variable ?? '__fileinfo__'} = ${JSON.stringify(info)};
+
+${source}
+`);
 }
 exports.default = default_1;

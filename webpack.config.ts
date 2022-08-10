@@ -69,7 +69,6 @@ export default function () {
               options: {
                 public: true,
                 fullpath: false,
-                fullpath111: false,
                 readis: true,
               }
             },
