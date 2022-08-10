@@ -43,7 +43,7 @@ in webpack.config.js
 }
 ```
 
-### Samples output
+### Sample outputs
 
 with options 
 
