@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
-const schema_utils_1 = __importDefault(require("schema-utils"));
+const schema_utils_1 = require("schema-utils");
 const schema = {
     type: 'object',
     properties: {
@@ -28,7 +28,7 @@ function default_1(source, map, meta) {
     const options = this.getOptions();
     const { public: pb, variable, fullpath, readis } = options;
     const { resourcePath } = this;
-    (0, schema_utils_1.default)(schema, options, {
+    (0, schema_utils_1.validate)(schema, options, {
         name: 'FileInfo Loader',
         baseDataPath: 'options',
     });

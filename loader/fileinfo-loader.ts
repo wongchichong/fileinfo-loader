@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import validate from 'schema-utils'
+import { validate } from 'schema-utils'
 import { Schema } from 'schema-utils/declarations/validate'
 import { LoaderContext } from 'webpack'
 
