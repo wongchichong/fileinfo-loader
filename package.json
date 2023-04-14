@@ -1,5 +1,5 @@
 {
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "fs.stats injection into every modules.",
   "name": "webpack-fileinfo-loader",
   "main": "./dist/loader/fileinfo-loader.js",
@@ -29,6 +29,7 @@
     "copy-webpack-plugin": "^6.2.1",
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.0",
+    "csstype": "^3.1.2",
     "eslint": "^7.12.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
