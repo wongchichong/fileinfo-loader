@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import fs from 'fs';
 import { LoaderContext } from 'webpack';
 declare global {

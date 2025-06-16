@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = default_1;
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 const schema_utils_1 = require("schema-utils");
@@ -55,4 +56,3 @@ function default_1(source, map, meta) {
 ${source}
 `);
 }
-exports.default = default_1;
